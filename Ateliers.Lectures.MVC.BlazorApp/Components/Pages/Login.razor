@@ -1,0 +1,62 @@
+﻿@page "/Login"
+@using System.ComponentModel.DataAnnotations
+@using Microsoft.AspNetCore.Authentication
+@using Microsoft.AspNetCore.Authentication.Cookies
+@using System.Security.Claims
+@using Ateliers.Lectures.MVC.SharedModel;
+@inject NavigationManager NavigationManager
+
+<h3>Login</h3>
+
+<EditForm EditContext="EditContext" FormName="login-form" OnValidSubmit="LoginAsync">
+    <DataAnnotationsValidator />
+    <ValidationSummary Model="userModel" />
+    <div>
+        <label>
+            ユーザー名:
+            <InputText @bind-Value="userModel.UserName" />
+            <ValidationMessage For="() => userModel.UserName" />
+        </label>
+    </div>
+    <div>
+        <label>
+            パスワード:
+            <InputText @bind-Value="userModel.Password" type="password" />
+            <ValidationMessage For="() => userModel.Password" />
+        </label>
+    </div>
+    <div>
+        <button type="submit">ログイン</button>
+    </div>
+</EditForm>
+
+@code {
+    [SupplyParameterFromForm]
+    private UserModel userModel { get; set; } = default!;
+    private EditContext EditContext { get; set; } = default!;
+    private ValidationMessageStore ValidationMessageStore { get; set; } = default!;
+
+    [Inject]
+    HttpClient Http { get; set; }
+
+    protected override void OnInitialized()
+    {
+        userModel ??= new();
+        EditContext = new(userModel);
+        ValidationMessageStore = new(EditContext);
+    }
+
+    private async Task LoginAsync(EditContext editContext)
+    {
+        var response = await Http.PostAsJsonAsync("api/login", userModel);
+        if (response.IsSuccessStatusCode)
+        {
+            // ログイン成功時の処理をここに書く
+        }
+        else
+        {
+            // ログイン失敗時の処理をここに書く
+        }
+
+    }
+}

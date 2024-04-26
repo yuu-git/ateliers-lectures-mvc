@@ -1,0 +1,10 @@
+@Ateliers.Lectures.MVC.APIServer_HostAddress = http://localhost:5054
+
+GET {{Ateliers.Lectures.MVC.APIServer_HostAddress}}/weatherforecast/
+Accept: application/json
+
+GET {{Ateliers.Lectures.MVC.APIServer_HostAddress}}/Users/
+Accept: application/json
+
+
+###
