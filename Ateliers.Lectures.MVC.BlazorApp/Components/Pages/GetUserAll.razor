@@ -1,0 +1,43 @@
+﻿@page "/get-user-all"
+@rendermode InteractiveServer
+@inject HttpClient httpClient
+
+<PageTitle>Users Example - GET</PageTitle>
+
+<h1> GET Example</h1>
+
+<h3> api/user/all - ユーザーリストを取得 </h3>
+
+<button class="btn btn-primary" @onclick="FetchUsers">ユーザーリストを取得</button>
+
+<div class="content">
+    @if (UserList.Count == 0)
+    {
+        <p>ユーザーが見つかりませんでした。</p>
+    }
+    else
+    {
+        <ul>
+            @foreach (var user in UserList)
+            {
+                <li>@user</li>
+            }
+        </ul>
+    }
+</div>
+
+@code {
+    private readonly List<string> UserList = new List<string>();
+
+    private async Task FetchUsers()
+    {
+        UserList.Clear();
+
+        // UsersController からユーザー情報を取得
+        var users = await httpClient.GetFromJsonAsync<List<string>>("api/user/all");
+        if (users != null)
+        {
+            UserList.AddRange(users);
+        }
+    }
+}

@@ -13,10 +13,15 @@ namespace Ateliers.Lectures.MVC.Net46.APIServer.Controllers
     public class LoginController : ApiController
     {
         [HttpPost]
-        [Route("login")]
         public IHttpActionResult Login([FromBody] UserModel userModel)
         {
-            return Ok();
+            // ここで認証処理を行います
+            if (userModel.UserName == "user" && userModel.Password == "pass")
+            {
+                return Ok("ログイン成功");
+            }
+
+            return Unauthorized();
         }
 
     }

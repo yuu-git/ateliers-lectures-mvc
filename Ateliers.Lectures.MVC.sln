@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ateliers.Lectures.MVC.BlazorApp", "Ateliers.Lectures.MVC.BlazorApp\Ateliers.Lectures.MVC.BlazorApp.csproj", "{617559FB-C951-4D6D-91DB-B5C3E12FE20C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ateliers.Lectures.MVC.APIServer", "Ateliers.Lectures.MVC.APIServer\Ateliers.Lectures.MVC.APIServer.csproj", "{6B4A4F2B-227D-4ABD-87C0-6207E7CDCCCB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ateliers.Lectures.MVC.APIServer", "Ateliers.Lectures.MVC.APIServer\Ateliers.Lectures.MVC.APIServer.csproj", "{6B4A4F2B-227D-4ABD-87C0-6207E7CDCCCB}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ateliers.Lectures.MVC.SharedModel", "Ateliers.Lectures.MVC.SharedModel\Ateliers.Lectures.MVC.SharedModel.csproj", "{C98DC353-6D61-4C14-A102-804A300A8944}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ateliers.Lectures.MVC.SharedModel", "Ateliers.Lectures.MVC.SharedModel\Ateliers.Lectures.MVC.SharedModel.csproj", "{C98DC353-6D61-4C14-A102-804A300A8944}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ateliers.Lectures.MVC.Net46.APIService", "Ateliers.Lectures.MVC.Net46.APIService\Ateliers.Lectures.MVC.Net46.APIService.csproj", "{5E7810BB-DC87-4DB0-9E64-0492DFD7DA3C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ateliers.Lectures.MVC.Net46.WebForms", "Ateliers.Lectures.MVC.Net46.WebForms\Ateliers.Lectures.MVC.Net46.WebForms.csproj", "{1E1F1D89-3F95-4790-B5AC-A2FEF2AEC685}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ateliers.Lectures.MVC.BlazorApp", "Ateliers.Lectures.MVC.BlazorApp\Ateliers.Lectures.MVC.BlazorApp.csproj", "{A90D12A5-0D2C-453D-8235-EA7EAC3361E8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ateliers.Lectures.MVC.APIClients", "Ateliers.Lectures.MVC.APIClients\Ateliers.Lectures.MVC.APIClients.csproj", "{555673AA-53F8-4C7E-BBA7-9B9B0867CD31}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,10 +21,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{617559FB-C951-4D6D-91DB-B5C3E12FE20C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{617559FB-C951-4D6D-91DB-B5C3E12FE20C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{617559FB-C951-4D6D-91DB-B5C3E12FE20C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{617559FB-C951-4D6D-91DB-B5C3E12FE20C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6B4A4F2B-227D-4ABD-87C0-6207E7CDCCCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6B4A4F2B-227D-4ABD-87C0-6207E7CDCCCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B4A4F2B-227D-4ABD-87C0-6207E7CDCCCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,6 +37,14 @@ Global
 		{1E1F1D89-3F95-4790-B5AC-A2FEF2AEC685}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E1F1D89-3F95-4790-B5AC-A2FEF2AEC685}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E1F1D89-3F95-4790-B5AC-A2FEF2AEC685}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A90D12A5-0D2C-453D-8235-EA7EAC3361E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A90D12A5-0D2C-453D-8235-EA7EAC3361E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A90D12A5-0D2C-453D-8235-EA7EAC3361E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A90D12A5-0D2C-453D-8235-EA7EAC3361E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{555673AA-53F8-4C7E-BBA7-9B9B0867CD31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{555673AA-53F8-4C7E-BBA7-9B9B0867CD31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{555673AA-53F8-4C7E-BBA7-9B9B0867CD31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{555673AA-53F8-4C7E-BBA7-9B9B0867CD31}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

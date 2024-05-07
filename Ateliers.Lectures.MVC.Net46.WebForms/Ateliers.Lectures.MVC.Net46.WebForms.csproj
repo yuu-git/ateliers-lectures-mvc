@@ -138,6 +138,8 @@
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
+    <Content Include="Forms\GetUserAll.aspx" />
+    <Content Include="Forms\GetUserId.aspx" />
     <Content Include="Global.asax" />
     <Content Include="LoginForm.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -224,6 +226,20 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GetUserAll.aspx.cs">
+      <DependentUpon>GetUserAll.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\GetUserAll.aspx.designer.cs">
+      <DependentUpon>GetUserAll.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GetUserId.aspx.cs">
+      <DependentUpon>GetUserId.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\GetUserId.aspx.designer.cs">
+      <DependentUpon>GetUserId.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
