@@ -1,6 +1,5 @@
-﻿@page "/get-user-id"
+﻿@page "/get-user-by-id"
 @rendermode InteractiveServer
-@using System.Net.Http.Json
 @inject HttpClient httpClient
 
 <PageTitle>Users Example - GET</PageTitle>
@@ -29,12 +28,15 @@ else if (HasError)
 }
 
 @code {
+    // 画面にバインドされているユーザーID
     private int UserId;
+
     private bool IsLoading;
     private bool HasError;
     private string? UserInfo;
     private string? ErrorMessage;
 
+    // `Get User Info` ボタンがクリックされたときに呼び出されるメソッド
     private async Task FetchUser()
     {
         IsLoading = true;
@@ -44,7 +46,7 @@ else if (HasError)
 
         try
         {
-            // APIからユーザー情報を取得するリクエスト
+            // GET リクエストを送信し UserController からユーザー情報を取得
             var response = await httpClient.GetAsync($"api/user/{UserId}");
 
             if (response.IsSuccessStatusCode)

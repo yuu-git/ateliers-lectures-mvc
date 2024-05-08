@@ -8,7 +8,7 @@
 
 <h3> api/user/all - ユーザーリストを取得 </h3>
 
-<button class="btn btn-primary" @onclick="FetchUsers">ユーザーリストを取得</button>
+<button class="btn btn-primary" @onclick="FetchUsers">Get User List</button>
 
 <div class="content">
     @if (UserList.Count == 0)
@@ -29,13 +29,14 @@
 @code {
     private readonly List<string> UserList = new List<string>();
 
+    // `Get User List` ボタンがクリックされたときに呼び出されるメソッド
     private async Task FetchUsers()
     {
         UserList.Clear();
 
-        // UsersController からユーザー情報を取得
-        var users = await httpClient.GetFromJsonAsync<List<string>>("api/user/all");
-        if (users != null)
+        // GET リクエストを送信し UserController からユーザー情報を取得
+        var users = await httpClient.GetFromJsonAsync<IEnumerable<string>>("api/user/all");
+        if (users is not null)
         {
             UserList.AddRange(users);
         }

@@ -13,11 +13,14 @@ namespace Ateliers.Lectures.MVC.Net46.WebForms.Forms
         {
         }
 
+        // ユーザ一覧取得ボタンクリック時のイベントハンドラ
         protected async void GetUserListButton_Click(object sender, EventArgs e)
         {
+            // ユーザ一覧を取得して表示
             await FetchUserListAsync();
         }
 
+        // ユーザ一覧を取得して表示する非同期メソッド
         private async Task FetchUserListAsync()
         {
             LoadingLabel.Visible = true;
@@ -28,7 +31,7 @@ namespace Ateliers.Lectures.MVC.Net46.WebForms.Forms
             {
                 using (HttpClient client = new HttpClient())
                 {
-                    // APIエンドポイントのリクエストURLを構築
+                    // URLを指定してGETリクエストを送信
                     string requestUrl = "https://localhost:44380/api/user/all";
                     var response = await client.GetAsync(requestUrl);
 

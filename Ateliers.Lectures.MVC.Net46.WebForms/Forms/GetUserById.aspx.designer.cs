@@ -11,17 +11,8 @@ namespace Ateliers.Lectures.MVC.Net46.WebForms.Forms
 {
 
 
-    public partial class GetUserId
+    public partial class GetUserById
     {
-
-        /// <summary>
-        /// form1 コントロール。
-        /// </summary>
-        /// <remarks>
-        /// 自動生成されたフィールド。
-        /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
         /// UserIdTextBox コントロール。

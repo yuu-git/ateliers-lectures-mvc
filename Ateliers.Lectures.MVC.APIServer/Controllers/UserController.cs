@@ -16,7 +16,7 @@ namespace Ateliers.Lectures.MVC.APIServer.Controllers
 
         // GET: api/user/{id}
         [HttpGet("{id}")]
-        public ActionResult<string> GetUser(int id)
+        public ActionResult<string> GetUserById(int id)
         {
             // ユーザー情報を確認して、ユーザー情報かエラーを返す
             return id < 0 || id >= _UserList.Count
