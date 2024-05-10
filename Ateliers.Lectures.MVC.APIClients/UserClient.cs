@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Ateliers.Lectures.MVC.APIClients
 {
     // 説明のために汎用性を捨てた限界まで雑なコード
-    public class UserClient
+    public class UserClient : IUserClient
     {
         public async Task<IEnumerable<string>> GetUserAll(CancellationToken token = default)
         {

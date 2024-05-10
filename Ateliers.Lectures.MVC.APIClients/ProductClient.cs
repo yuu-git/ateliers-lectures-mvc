@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Ateliers.Lectures.MVC.APIClients
 {
-    public class ProductClient
+    public class ProductClient : IProductClient
     {
         public string ServerPath { get; }
 
